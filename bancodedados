@@ -4,3 +4,8 @@ LEFT JOIN estoque
 	on products.name_product = estoque.name_product
 WHERE estoque.quantify is null
 
+SELECT productsgroup.id, products.id_productgroup, products.name_product, productsgroup.type
+FROM products
+INNER JOIN productsgroup
+on productsgroup.id = products.id_productgroup
+WHERE productsgroup.type = 'limpeza';
