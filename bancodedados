@@ -1,0 +1,6 @@
+SELECT products.name_product, estoque.quantify
+FROM products
+LEFT JOIN estoque
+	on products.name_product = estoque.name_product
+WHERE estoque.quantify is null
+
