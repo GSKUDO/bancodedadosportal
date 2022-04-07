@@ -1,0 +1,20 @@
+VIEW 1
+
+CREATE VIEW produtos_acima_20 AS
+SELECT  name_product, price
+FROM products
+WHERE price > 20;
+
+VIEW 2 
+
+CREATE VIEW paulistanos AS
+SELECT *
+FROM users
+WHERE city = 'São Paulo'
+
+VIEW 3
+
+CREATE OR REPLACE VIEW PRODUTOS_VENCIDOS AS
+SELECT  id_product, name_product, expirationdate, quantify
+FROM estoque
+WHERE expirationdate < CURRENT_TIMESTAMP;
